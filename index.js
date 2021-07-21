@@ -28,6 +28,15 @@ $('.demoButton').toggleClass('blau')
 
 $(".buttonImForm").click(nichtNeueLaden)
 function nichtNeueLaden(event){
-event.preventDefault()
+    event.preventDefault();
 }
 
+
+//-----------------------------------------
+$('#eingabe').blur(inputblur);
+
+function inputblur (event){
+    let input=event.target.value;
+    console.log(input);
+    $('#liste').append(input);
+}
